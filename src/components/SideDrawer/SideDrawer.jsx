@@ -9,27 +9,29 @@ const SideDrawer = ({ open, onClose }) => {
         { where: 'venuenfo', value: 'Venue NFO' },
         { where: 'highlights', value: 'Highlights' },
         { where: 'pricing', value: 'Pricing' },
-        { where: 'location', value: 'Location' }
-
+        { where: 'location', value: 'Location' },
     ]
 
-    const renderItem = (item) => {
-        return (
-            <ListItem button onClick={() => alert('item.where')} key={item.where}>
+    /*const renderItem = (item) => (
+            <ListItem button onClick={() => alert(item.where)} key={item.where}>
                 {item.value}
             </ListItem>
-            )
-    }
+        )*/
 
     return (
         <Drawer
             anchor="right"
             open={open}
             onClose={() => onClose(false)}
-
         >
             <List component="nav">
-                {links.map((item) => renderItem())}
+                {links.map((item) => {
+                    return (
+                        <ListItem button onClick={() => alert(item.where)} key={item.where}>
+                            {item.value}
+                        </ListItem>
+                    )
+                })}
             </List>
 
         </Drawer>

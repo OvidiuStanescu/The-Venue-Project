@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 
 import { AppBar, Toolbar, IconButton } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
-
 import SideDrawer from '../SideDrawer/SideDrawer';
+
 
 
 const Header = () => {
@@ -23,6 +23,7 @@ const Header = () => {
                 padding: '10px 0px'
             }}
         >
+
             <Toolbar>
 
                 <div className='header_logo'>
@@ -35,9 +36,7 @@ const Header = () => {
                     color="inherit"
                     onClick={() => toggleDrawer(true)}
                 >
-
                     <MenuIcon />
-
                 </IconButton>
 
                 <SideDrawer
