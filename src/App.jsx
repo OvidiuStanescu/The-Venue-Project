@@ -3,17 +3,21 @@ import './resources/styles.css'
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import Featured from "./components/Featured/Featured";
 
 
 const App = () => {
   return (
     <div className="App">
       <Header />
+      <>
+        <Featured />
+      </>
 
-      <div style={{backgroundColor:'red', height:'800px'}}></div>
-      <div style={{backgroundColor:'green', height:'800px'}}></div>
-      <div style={{backgroundColor:'blue', height:'800px'}}></div>
-      <div style={{backgroundColor:'yellow', height:'800px'}}></div>
+      <div style={{ backgroundColor: 'red', height: '800px' }}></div>
+      <div style={{ backgroundColor: 'green', height: '800px' }}></div>
+      <div style={{ backgroundColor: 'blue', height: '800px' }}></div>
+      <div style={{ backgroundColor: 'yellow', height: '800px' }}></div>
 
       <Footer />
     </div>
